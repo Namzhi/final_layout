@@ -15,6 +15,7 @@
     block-size: auto;
     padding: 0;
     margin: 0;
+
     margin-right: 16px;
   }
 
@@ -30,8 +31,11 @@
     background-color: $color-divider;
     margin-left: 15.73px;
     margin-right: 3px;
+    // margin-right: auto;
   }
-
+  &__menu:nth-child(6) {
+    margin-left: auto;
+  }
   &__menu:last-child {
     margin-right: 0;
   }
@@ -85,7 +89,9 @@
       margin-right: 4px;
       align-self: center;
     }
-
+    &__menu:nth-child(6) {
+      margin-left: 0;
+    }
     &__menu:last-child {
       margin-right: 0;
     }

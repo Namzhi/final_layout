@@ -51,8 +51,9 @@
     justify-content: center;
     &__body {
       padding: 42px 25px 21px 34px;
-      width: (1060px);
-
+      width: calc(100% - 306px);
+      // min-width: (1060px);
+      max-width: 1134px;
       // margin-left: auto;
       // margin-right: auto;
       transform: translateX(153px);

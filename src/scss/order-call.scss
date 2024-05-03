@@ -8,13 +8,13 @@
     height: 100%;
     padding: 0 16px;
     z-index: 2;
-
     display: none;
     opacity: 1;
-    position: absolute;
     top: 0;
     right: 0;
     background-color: white;
+    overflow: auto;
+    scrollbar-width: none;
   }
   &__title {
     font-size: $font-size-services__title;
@@ -158,9 +158,9 @@
     }
     &__exit {
       display: block;
-      position: absolute;
+      position: fixed;
       margin: 0;
-      left: -72px;
+      right: calc(440px + 32px);
       top: 32px;
     }
     &__title {

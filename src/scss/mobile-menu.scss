@@ -15,6 +15,8 @@
     padding: 0 24px;
     opacity: 1;
     display: none;
+    overflow: auto;
+    scrollbar-width: none;
   }
   &__header {
     display: flex;
@@ -112,6 +114,7 @@
       width: 306px;
       box-shadow: none;
       padding-right: 29px;
+      z-index: 0;
     }
     &__header {
       align-items: center;

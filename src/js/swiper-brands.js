@@ -1,13 +1,13 @@
-import Swiper from 'swiper';
-import 'swiper/modules';
+import Swiper from 'swiper'
+import 'swiper/modules'
 
 import {
   Navigation,
   Pagination,
   Scrollbar,
   EffectCoverflow
-} from 'swiper/modules';
-Swiper.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
+} from 'swiper/modules'
+Swiper.use([Navigation, Pagination, Scrollbar, EffectCoverflow])
 new Swiper('.logo-slider-brands', {
   pagination: {
     el: '.swiper-pagination__brands',
@@ -23,41 +23,41 @@ new Swiper('.logo-slider-brands', {
       spaceBetween: 24
     }
   }
-});
+})
 
-let buttonShow = document.querySelector('.logo-slider-brands__showmore');
+let buttonShow = document.querySelector('.logo-slider-brands__showmore')
 let buttonShowText = buttonShow.querySelector(
   '.logo-slider-brands__showmore-text'
-);
-let wrapper = document.querySelector('.logo-slider-brands__wrapper');
+)
+let wrapper = document.querySelector('.logo-slider-brands__wrapper')
 
 function show() {
   buttonShow.addEventListener('click', function (evt) {
-    evt.preventDefault();
+    evt.preventDefault()
 
-    wrapper.classList.remove('logo-slider-brands__wrapper--hidden');
-    wrapper.classList.add('logo-slider-brands__wrapper--open-margin-bottom');
+    wrapper.classList.remove('logo-slider-brands__wrapper--hidden')
+    wrapper.classList.add('logo-slider-brands__wrapper--open-margin-bottom')
 
-    buttonShowText.textContent = 'Cкрыть';
+    buttonShowText.textContent = 'Cкрыть'
 
-    hide();
-  });
+    hide()
+  })
 }
 
 function hide() {
   if (buttonShowText.textContent === 'Cкрыть') {
     buttonShow.addEventListener('click', function (evt) {
-      evt.preventDefault();
+      evt.preventDefault()
 
-      wrapper.classList.add('logo-slider-brands__wrapper--hidden');
+      wrapper.classList.add('logo-slider-brands__wrapper--hidden')
       wrapper.classList.remove(
         'logo-slider-brands__wrapper--open-margin-bottom'
-      );
+      )
 
-      buttonShowText.textContent = 'Показать все';
-      show();
-    });
+      buttonShowText.textContent = 'Показать все'
+      show()
+    })
   }
 }
 
-show();
+show()

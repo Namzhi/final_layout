@@ -4,11 +4,8 @@
   padding: 0 16px;
   display: flex;
   align-items: center;
-  z-index: 0;
   background-color: white;
-  &--opacity-half {
-    opacity: 3.5%;
-  }
+
   &__menu.button {
     display: flex;
     align-items: center;
@@ -31,7 +28,6 @@
     background-color: $color-divider;
     margin-left: 15.73px;
     margin-right: 3px;
-    // margin-right: auto;
   }
   &__menu:nth-child(6) {
     margin-left: auto;
@@ -102,6 +98,7 @@
     }
   }
   @media (min-width: $screen-lg) {
+    display: none;
     &__action {
       display: inline-block;
       align-self: center;
@@ -132,10 +129,6 @@
     }
 
     &__menu.button:nth-child(n)::after {
-      display: none;
-    }
-
-    &--hidden {
       display: none;
     }
   }

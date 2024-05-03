@@ -32,7 +32,7 @@
 
   @media (min-width: $screen-md) {
     &__section {
-      letter-spacing: -0.20000000298023224px;
+      letter-spacing: -0.2px;
     }
   }
   @media (min-width: $screen-lg) {
@@ -40,7 +40,7 @@
     justify-content: space-between;
 
     &__section {
-      letter-spacing: -0.20000000298023224px;
+      letter-spacing: -0.2px;
 
       padding: 8px 12px;
       border: solid 2px transparent;

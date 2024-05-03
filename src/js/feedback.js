@@ -1,47 +1,39 @@
-let showFeedback = document.querySelectorAll('.header__chat')
-let clientWidth = document.body.clientWidth
+const showFeedback = document.querySelectorAll('.header__chat')
+const clientWidth = document.body.clientWidth
+const services__body = document.querySelector('.services__body')
+const services = document.querySelector('.services')
+const overlay = document.createElement('div')
+const Feedback = document.querySelector('.feedback__wrapper')
+const mobileMenu = document.querySelector('.mobile-menu__wrapper')
+const header = document.querySelector('.header')
+const Feedback__exit = document.querySelector('.feedback__exit')
+
 for (let i = 0; i < showFeedback.length; i++) {
   showFeedback[i].addEventListener('click', function () {
-    let overlay = document.querySelector('.overlay')
-    let Feedback = document.querySelector('.feedback__wrapper')
+    if (document.querySelector('.overlay') !== null) {
+      document.querySelector('.overlay').remove()
+    }
+    services.append(overlay)
+    overlay.classList.add('overlay', 'overlay--position')
 
-    let header = document.querySelector('.header')
-
-    let services__body = document.querySelector('.services__body')
     Feedback.classList.add('mobile-menu__wrapper--visible')
-    overlay.classList.add('mobile-menu__wrapper--visible')
 
-    header.classList.add('header--opacity-half')
-    services__body.classList.add('header--opacity-half')
-    overlay.classList.remove('overlay--hidden')
-    let mobileMenu = document.querySelector('.mobile-menu__wrapper')
     mobileMenu.classList.remove('mobile-menu__wrapper--visible')
     hideFeedback(Feedback, services__body, header)
   })
 
-  let hideFeedback = function (Feedback, services__body, header) {
-    let overlay = document.querySelector('.overlay')
-    let Feedback__exit = document.querySelector('.feedback__exit')
-
+  const hideFeedback = function (Feedback) {
     overlay.addEventListener('click', function (evt) {
       Feedback.classList.remove('mobile-menu__wrapper--visible')
-
-      header.classList.remove('header--opacity-half')
-      services__body.classList.remove('header--opacity-half')
-      overlay.classList.add('overlay--hidden')
+      if (document.querySelector('.overlay')) {
+        document.querySelector('.overlay').remove()
+      }
     })
     Feedback__exit.addEventListener('click', function (evt) {
-      Feedback.classList.remove('mobile-menu__wrapper--visible')
-
-      if (
-        clientWidth >= 1440 ||
-        document.querySelector('.mobile-menu.mobile-menu__wrapper--visible') ==
-          null
-      ) {
-        header.classList.remove('header--opacity-half')
-        services__body.classList.remove('header--opacity-half')
-        overlay.classList.add('overlay--hidden')
+      if (document.querySelector('.overlay')) {
+        document.querySelector('.overlay').remove()
       }
+      Feedback.classList.remove('mobile-menu__wrapper--visible')
     })
   }
 }

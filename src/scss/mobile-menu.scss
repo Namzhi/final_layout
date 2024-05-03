@@ -5,7 +5,6 @@
   &__wrapper {
     box-shadow: 16px 0px 52px 0px #0e185033, -2px 0px 4px 0px #454f7e05;
     width: 100%;
-    // height: 676px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -13,16 +12,13 @@
     z-index: 2;
     background-color: white;
     box-sizing: border-box;
-
     padding: 0 24px;
-
     opacity: 1;
     display: none;
   }
   &__header {
     display: flex;
     height: 70px;
-
     margin-bottom: 22px;
   }
 
@@ -35,14 +31,6 @@
     height: 51px;
     margin-top: 18.73px;
   }
-  // &__logo--hover {
-  //   transition: 0.3s ease-in-out;
-  //   cursor: pointer;
-  // }
-
-  // &__logo--hover:hover {
-  //   filter: grayscale(1);
-  // }
 
   &__search {
     margin-left: auto;
@@ -60,8 +48,6 @@
   &__contacts {
     width: 196px;
     height: 124px;
-    // position: absolute;
-    // bottom: 64px;
     display: inline-block;
 
     font-size: 0;
@@ -109,7 +95,6 @@
   }
 
   @media (min-width: $screen-md) {
-    // min-height: 1024px;
     &__wrapper {
       height: 100%;
       width: 320px;
@@ -128,8 +113,6 @@
       box-shadow: none;
       padding-right: 29px;
     }
-    // left: auto;
-    // transform: translateX(-530px);
     &__header {
       align-items: center;
       margin-top: 21px;
